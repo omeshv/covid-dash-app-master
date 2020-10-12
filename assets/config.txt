@@ -1,0 +1,7 @@
+[DEFAULT]
+ShowLegend = False
+Template= plotly
+Annotation_Text_Angle=-90
+# simple_white
+# "plotly", "plotly_white", "plotly_dark", "ggplot2", "seaborn", "simple_white", "none"
+
