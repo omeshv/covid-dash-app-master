@@ -52,7 +52,7 @@ def getReportList(category_name, access_name, df):
     return reqReports['KPI Name'].unique()
 
 
-global_df = pd.read_excel("C:/LocalData/DS/Activity/MMEA_Dashboard/sample_input.xlsx", sheet_name='graphs')
+global_df = pd.read_excel('sample_input.xlsx', sheet_name='graphs')
 # df = pd.read_excel("C:/LocalData/DS/Activity/MMEA_Dashboard/sample_input.xlsx", sheet_name='graphs')
 reportList = convertListToDict(global_df['Category'].unique(), global_df)
 print(reportList)
@@ -122,7 +122,7 @@ layout = html.Div([
               [Input('refreshData', 'n_clicks')],
               )
 def update_data(n_clicks):
-    df = pd.read_excel("C:/LocalData/DS/Activity/MMEA_Dashboard/sample_input.xlsx", sheet_name='graphs')
+    df = pd.read_excel('sample_input.xlsx', sheet_name='graphs')
     return df.to_json(date_format='iso', orient='split')
 
 

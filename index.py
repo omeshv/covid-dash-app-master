@@ -13,7 +13,7 @@ import psutil
 #from app import server
 from app import app
 # import all pages in the app
-from apps import global_situation, singapore, home, keyreport, dyn_graph
+from apps import home, dyn_graph
 
 # building the navigation bar
 # https://github.com/facultyai/dash-bootstrap-components/blob/master/examples/advanced-component-usage/Navbars.py
@@ -25,8 +25,6 @@ dropdown = dbc.DropdownMenu(
     children=[
         dbc.DropdownMenuItem("Home", href="/home"),
         dbc.DropdownMenuItem("Dynamic Graphs", href="/dyn_graph"),
-        dbc.DropdownMenuItem("BO PI Dashboard", href="/keyreport?id=1"),
-        dbc.DropdownMenuItem("NS BH Report", href="/keyreport?id=2"),
     ],
     nav = True,
     in_navbar = True,
@@ -94,8 +92,6 @@ def display_page(pathname):
     #    return global_situation.layout
     elif pathname == '/dyn_graph':
         return dyn_graph.layout
-    elif pathname == '/singapore':
-        return singapore.layout
     else:
         return home.layout
 
